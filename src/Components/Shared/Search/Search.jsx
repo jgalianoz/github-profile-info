@@ -1,17 +1,25 @@
 import React from 'react';
 
+import './Search.css';
 
 function Search (props) {
   return(
-    <div role="Search">
-      Buscador
-      <span>
-        X
-      </span>
+    <div role="Search" className="container-search">
+      <div className="container-title">
+        <h3 className="title-search">
+          <i className="material-icons">search</i>
+          Buscador
+        </h3>
+        <span className="close">
+          <i className="material-icons">close</i>
+        </span>
+      </div>
       <form onSubmit={props.initialFetch} >
         <input
           id="texto"
           type="search"
+          autoComplete="off"
+          placeholder="Search user github..."
           onChange={props.textValue}/>
       </form>
     </div>

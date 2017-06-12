@@ -1,0 +1,15 @@
+.Wrapper {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.banner {
+  background: #4CAF50;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  padding: 1em;
+}
+
+.banner > h2 {
+  font-weight: 500;
+}

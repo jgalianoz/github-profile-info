@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import api from '../../api.js';
 
+import './Home.css';
+
 import Search from '../../Components/Shared/Search/Search';
 import User from '../../Components/User/User';
 
@@ -35,11 +37,18 @@ class Home extends Component {
 
   render() {
     return (
-      <section>
-        <Search
-          textValue={this.textInput}
-          initialFetch={this.initialFetch} />
-        <User { ...this.state.user } />
+      <section className="container-app">
+        <div className="banner">
+          <h2>
+            Find the profile you want
+          </h2>
+        </div>
+        <div className="Wrapper">
+          <Search
+            textValue={this.textInput}
+            initialFetch={this.initialFetch} />
+          <User { ...this.state.user } />
+        </div>
       </section>
     );
   }

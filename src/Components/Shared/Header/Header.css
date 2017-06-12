@@ -1,14 +1,19 @@
 .header {
+  align-items: center;
   background: #212121;
-  padding: 1em;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  padding: 1em;
+  position: relative
 }
 
 .header-title {
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
   margin: 0;
   padding: 0;
-  color: #FFFFFF;
+
 }
