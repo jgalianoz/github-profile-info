@@ -4,8 +4,8 @@ const baseURL = 'https://api.github.com';
 
 const api = {
   users: {
-    async listUser() {
-      const response = await fetch(`${baseURL}/users/jgalianoz`)
+    async listUser(user = 'jgalianoz') {
+      const response = await fetch(`${baseURL}/users/${user}`)
       const value = await response.json();
       return value;
     }

@@ -6,9 +6,12 @@ import {
 
 import Home from './Home';
 
+import Header from '../../Components/Shared/Header/Header';
+
 function Page () {
   return(
     <section>
+      <Header/>
       <Router>
         <Route exact path="/" component={Home}/>
       </Router>

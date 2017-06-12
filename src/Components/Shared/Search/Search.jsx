@@ -8,7 +8,7 @@ function Search (props) {
       <span>
         X
       </span>
-      <form>
+      <form onSubmit={props.initialFetch} >
         <input
           id="texto"
           type="search"

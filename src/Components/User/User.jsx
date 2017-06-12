@@ -1,9 +1,14 @@
 import React from 'react';
 
-function User () {
+function User (props) {
+
+  if ( props.message ) {
+    console.log(props.message);
+  }
+
   return(
     <p>
-      usuarios
+      { props.name }
     </p>
   );
 }
