@@ -3,14 +3,20 @@ import React from 'react';
 import './Search.css';
 
 function Search (props) {
+
+  function CloseSearch(ev) {
+    const element = ev.target.closest('#search');
+    element.classList.remove('search-active');
+  }
+
   return(
-    <div role="Search" className="container-search">
+    <div id="search" className="container-search">
       <div className="container-title">
         <h3 className="title-search">
           <i className="material-icons">search</i>
           Buscador
         </h3>
-        <span className="close">
+        <span className="close" onClick={CloseSearch}>
           <i className="material-icons">close</i>
         </span>
       </div>

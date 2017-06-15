@@ -15,5 +15,13 @@
   font-size: 1.2em;
   margin: 0;
   padding: 0;
+}
 
+.search {
+  cursor: pointer;
+}
+
+.search > i {
+  font-size: 2em;
+  color: #FFFFFF;
 }

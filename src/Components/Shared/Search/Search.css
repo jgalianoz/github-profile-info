@@ -7,8 +7,13 @@
   margin-top: 23px;
   padding: .8em .8em 3em;
   position: fixed;
-  top: 0;
+  top: -500px;
   width: 50%;
+  transition: top .3s
+}
+
+.search-active {
+  top: 0;
 }
 
 .container-title {
