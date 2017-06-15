@@ -13,7 +13,7 @@ class Home extends Component {
     super();
     this.state = {
       query: '',
-      user: {},
+      result: null,
     };
     this.initialFetch = this.initialFetch.bind(this);
     this.textInput = this.textInput.bind(this);
@@ -21,11 +21,15 @@ class Home extends Component {
 
   async initialFetch(ev, users) {
     ev.preventDefault();
-
     const user = await api.users.listUser(this.state.query);
+    this.showUser(user)
+  }
+
+  showUser(usersData) {
+    const el = <User { ...usersData } />;
     this.setState({
-      user,
-    })
+      result: el,
+    });
   }
 
   textInput(input) {
@@ -47,7 +51,9 @@ class Home extends Component {
           <Search
             textValue={this.textInput}
             initialFetch={this.initialFetch} />
-          <User { ...this.state.user } />
+          {
+            this.state.result
+          }
         </div>
       </section>
     );

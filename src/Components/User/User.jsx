@@ -7,9 +7,13 @@ function User (props) {
   }
 
   return(
-    <p>
-      { props.name }
-    </p>
+    <section name="user">
+      <div className="userInfo">
+        <figure className="userInfo-avatar">
+          <img src={`${props.avatar_url}`} />
+        </figure>
+      </div>
+    </section>
   );
 }
 
