@@ -5,7 +5,7 @@ import './Header.css';
 function Header () {
 
   function ToggelSearch() {
-    const search = document.getElementById('search')
+    const search = document.getElementById('search');
     search.classList.add('search-active');
   }
 

@@ -1,0 +1,35 @@
+.container-user {
+  margin-top: 50px;
+}
+
+.userInfo {
+  text-align: center;
+}
+
+.userInfo-avatar {
+  padding: 0;
+  margin: 0;
+}
+
+.userInfo-avatar > img {
+  border-radius: 50%;
+}
+
+.contDatos-title {
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contDatos-username {
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.TabList > li {
+  display: inline-block;
+  padding: 1em;
+  cursor: pointer;
+}
