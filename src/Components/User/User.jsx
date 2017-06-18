@@ -6,8 +6,9 @@ import {
   TabPanel
 } from 'react-tabs';
 
-
 import './User.css';
+
+import Repository from '../../Route/containers/Repositories/Repository';
 
 function User (props) {
 
@@ -50,13 +51,13 @@ function User (props) {
           <Tabs>
 
             <TabList className="TabList">
-              <Tab>Repositories</Tab>
-              <Tab>Followers</Tab>
-              <Tab>Following</Tab>
+              <Tab className="TabList-link">Repositories</Tab>
+              <Tab className="TabList-link">Followers</Tab>
+              <Tab className="TabList-link">Following</Tab>
             </TabList>
 
             <TabPanel>
-              <h2>Repositories</h2>
+              <Repository user={props.login} />
             </TabPanel>
 
             <TabPanel>

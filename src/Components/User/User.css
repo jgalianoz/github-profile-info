@@ -28,8 +28,18 @@
   text-decoration: none;
 }
 
-.TabList > li {
-  display: inline-block;
+.TabList {
+  border-bottom: 1px solid #DDD;
+  padding: 0;
+}
+
+.TabList > .TabList-link {
   padding: 1em;
+  list-style: none;
   cursor: pointer;
+  display: inline-block;
+}
+
+.TabList > [role=tab][aria-selected=true] {
+  border-bottom: 2px solid #4CAF50;
 }

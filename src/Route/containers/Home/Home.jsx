@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import api from '../../api.js';
+import api from '../../../api.js';
 
 import './Home.css';
 
-import Search from '../../Components/Shared/Search/Search';
-import User from '../../Components/User/User';
+import Search from '../../../Components/Shared/Search/Search';
+import User from '../../../Components/User/User';
 
 class Home extends Component {
 
