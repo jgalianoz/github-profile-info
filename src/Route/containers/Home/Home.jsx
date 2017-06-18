@@ -21,6 +21,7 @@ class Home extends Component {
 
   async initialFetch(ev, users) {
     ev.preventDefault();
+    this.props.history.push(`/#search=${this.state.query}`)
     const user = await api.users.listUser(this.state.query);
     this.showUser(user)
   }
