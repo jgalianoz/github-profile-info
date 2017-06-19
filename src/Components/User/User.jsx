@@ -8,7 +8,7 @@ import {
 
 import './User.css';
 
-import Repository from '../../Route/containers/Repositories/Repository';
+import Repositorys from '../../Route/containers/Repositories/Repositorys';
 
 function User (props) {
 
@@ -57,10 +57,7 @@ function User (props) {
             </TabList>
 
             <TabPanel>
-              <Repository user={props.login} />
-              {
-
-              }
+              <Repositorys user={props.login} />
             </TabPanel>
 
             <TabPanel>
