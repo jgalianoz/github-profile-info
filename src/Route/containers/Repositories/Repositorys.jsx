@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Pagination from 'react-js-pagination';
 
-import api from '../../../api.js';
+import api from '../../../utils/api.js';
 
 import Repository from '../../../Components/Repository/Repository';
 import Loading from '../../../Components/Shared/Loading/Loading';
@@ -42,12 +42,11 @@ class Repositorys extends Component {
         <Loading />
       );
     }
-    const limit = 10;
 
-    const Lasttodo = this.state.page * limit;
-    const FirstTodo = Lasttodo - limit
-
-    const repos = this.state.repositories.slice(FirstTodo, Lasttodo);
+    const limit = 5;
+    const secundary = this.state.page * limit;
+    const initial = secundary - limit
+    const repos = this.state.repositories.slice(initial, secundary);
 
     return(
       <section className="container-repos">
@@ -58,12 +57,15 @@ class Repositorys extends Component {
             );
           })
         }
-        <Pagination
-          activePage={this.state.page}
-          itemsCountPerPage={limit}
-          totalItemsCount={this.state.repositories.length}
-          onChange={this.handlePageChange}
-        />
+
+        <div className="container-pagination">
+          <Pagination
+            activePage={this.state.page}
+            itemsCountPerPage={limit}
+            totalItemsCount={this.state.repositories.length}
+            onChange={this.handlePageChange}
+          />
+        </div>
 
       </section>
     );

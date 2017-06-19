@@ -1,0 +1,31 @@
+.container-pagination {
+  padding: 1em;
+}
+
+.container-pagination > .pagination {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination > li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.pagination > li:first-child {
+  margin-left: 0;
+}
+
+.pagination > li > a {
+  background: #4CAF50;
+  padding: .8em 1em;
+  display: inline-block;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.pagination > .disabled > a {
+  background: #DDD;
+  color: #000;
+}

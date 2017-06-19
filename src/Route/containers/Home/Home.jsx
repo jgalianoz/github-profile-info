@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import api from '../../../api.js';
+import api from '../../../utils/api.js';
 
 import './Home.css';
 
