@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Pagination from 'react-js-pagination';
 
-import api from '../../../utils/api.js';
-
 import Repository from '../../../Components/Repository/Repository';
 import Loading from '../../../Components/Shared/Loading/Loading';
 
@@ -12,23 +10,10 @@ class Repositorys extends Component {
     super(props);
 
     this.state = {
-      repositories: [],
       page: 1,
       loading: true,
     };
     this.handlePageChange = this.handlePageChange.bind(this);
-  }
-
-  componentDidMount() {
-    this.initialFetch();
-  }
-
-  async initialFetch() {
-    const repositories = await api.repository.listRepos(this.props.user);
-    this.setState({
-      repositories,
-      loading: false,
-    })
   }
 
   handlePageChange(newpage) {
@@ -37,19 +22,14 @@ class Repositorys extends Component {
 
   render() {
 
-    if( this.state.loading ) {
-      return(
-        <Loading />
-      );
-    }
-
     const limit = 5;
     const secundary = this.state.page * limit;
     const initial = secundary - limit
-    const repos = this.state.repositories.slice(initial, secundary);
+    const repos = this.props.repos.slice(initial, secundary);
 
     return(
       <section className="container-repos">
+
         {repos
           .map(repo => {
             return(
@@ -61,8 +41,8 @@ class Repositorys extends Component {
         <div className="container-pagination">
           <Pagination
             activePage={this.state.page}
-            itemsCountPerPage={limit}
-            totalItemsCount={this.state.repositories.length}
+            itemsCountPerPage={5}
+            totalItemsCount={this.props.repos.length}
             onChange={this.handlePageChange}
           />
         </div>

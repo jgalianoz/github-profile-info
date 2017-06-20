@@ -19,15 +19,22 @@ class Home extends Component {
     this.textInput = this.textInput.bind(this);
   }
 
-  async initialFetch(ev, users) {
+  async initialFetch(ev) {
     ev.preventDefault();
     this.props.history.push(`/#search=${this.state.query}`)
-    const user = await api.users.listUser(this.state.query);
-    this.showUser(user)
+
+    const [
+      user,
+      repositories
+    ] = await Promise.all([
+      api.users.listUser(this.state.query),
+      api.repository.listRepos(this.state.query),
+    ]);
+    this.showUser(user, repositories)
   }
 
-  showUser(usersData) {
-    const el = <User { ...usersData } />;
+  showUser(user, repos) {
+    const el = <User  {...user} repos={repos}/>;
     this.setState({
       result: el,
     });

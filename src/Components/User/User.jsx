@@ -13,12 +13,12 @@ import Repositorys from '../../Route/containers/Repositories/Repositorys';
 function User (props) {
 
   if ( props.message ) {
-    return(
-      <p>
-        { props.message }
-      </p>
-    );
-  }
+   return(
+     <p>
+       { props.message }
+     </p>
+   );
+ }
 
   return(
     <section className="container-user" name="user">
@@ -39,12 +39,14 @@ function User (props) {
             target="_blank">
               {props.login}
           </a>
-          <address className="contDatos-address">
-            <i className="material-icons">location_on</i>
-            {
-              props.location
-            }
-          </address>
+          {
+            props.location ? <address className="contDatos-address">
+              <i className="material-icons">location_on</i>
+              {
+                props.location
+              }
+            </address> : null
+          }
         </div>
 
         <div className="container-Tabs">
@@ -57,7 +59,7 @@ function User (props) {
             </TabList>
 
             <TabPanel>
-              <Repositorys user={props.login} />
+              <Repositorys repos={props.repos} />
             </TabPanel>
 
             <TabPanel>
