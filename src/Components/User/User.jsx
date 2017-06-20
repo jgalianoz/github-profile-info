@@ -23,17 +23,19 @@ function User (props) {
   return(
     <section className="container-user" name="user">
       <div className="userInfo">
-        <figure className="userInfo-avatar">
-          <img
-            src={`${props.avatar_url}`}
-            width="200"
-            height="200"
-            alt={`${props.login}`} />
-        </figure>
+        <a href={props.html_url} target="_blank">
+          <figure className="userInfo-avatar">
+            <img
+              src={`${props.avatar_url}`}
+              width="200"
+              height="200"
+              alt={`${props.login}`} />
+          </figure>
+        </a>
         <div className="contDatos">
           <h3 className="contDatos-title">{props.name}</h3>
           <a
-            href={`${props.html_url}`}
+            href={props.html_url}
             className="contDatos-username"
             rel="noopener noreferrer"
             target="_blank">

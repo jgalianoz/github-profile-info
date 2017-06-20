@@ -1,7 +1,19 @@
-
-
 .Repository {
   border: 1px solid #DDD;
   padding: .5em;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Repository-data > a {
+  color: #212121;
+}
+
+.Repository-data {
+  text-align: left;
+}
+
+.Repository-data-title {
+  font-weight: 300;
 }
