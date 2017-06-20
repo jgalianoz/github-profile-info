@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Pagination from 'react-js-pagination';
 
 import Repository from '../../../Components/Repository/Repository';
-import Loading from '../../../Components/Shared/Loading/Loading';
 
 class Repositorys extends Component {
 
@@ -38,14 +37,16 @@ class Repositorys extends Component {
           })
         }
 
-        <div className="container-pagination">
-          <Pagination
-            activePage={this.state.page}
-            itemsCountPerPage={5}
-            totalItemsCount={this.props.repos.length}
-            onChange={this.handlePageChange}
-          />
-        </div>
+        {
+          this.props.repos.length ? <div className="container-pagination">
+            <Pagination
+              activePage={this.state.page}
+              itemsCountPerPage={limit}
+              totalItemsCount={this.props.repos.length}
+              onChange={this.handlePageChange}
+            />
+          </div> : null
+        }
 
       </section>
     );
