@@ -6,7 +6,7 @@ function Search (props) {
 
   function CloseSearch(ev) {
     const element = ev.target.closest('#search');
-    element.classList.remove('search-active');
+    element.classList.add('search-inactive');
   }
 
   return(

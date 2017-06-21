@@ -23,7 +23,7 @@ function User (props) {
   return(
     <section className="container-user" name="user">
       <div className="userInfo">
-        <a href={props.html_url} target="_blank">
+        <a href={props.html_url} target="_blank" rel="noopener noreferrer">
           <figure className="userInfo-avatar">
             <img
               src={`${props.avatar_url}`}

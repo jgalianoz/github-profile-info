@@ -6,7 +6,7 @@ function Header () {
 
   function ToggelSearch() {
     const search = document.getElementById('search');
-    search.classList.add('search-active');
+    search.classList.remove('search-inactive');
   }
 
   return(

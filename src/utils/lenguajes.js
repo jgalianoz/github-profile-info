@@ -26,7 +26,11 @@ const Lenguajes = {
   coffeeScript: {
     name: 'CoffeeScript',
     url: 'http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/03/1427207179CoffeeScriptLogo.png',
-  }
+  },
+  python: {
+    name: 'Python',
+    url: 'http://python.net/~goodger/projects/graphics/python/newlogo-repro.png',
+  },
 };
 
 export default Lenguajes;
