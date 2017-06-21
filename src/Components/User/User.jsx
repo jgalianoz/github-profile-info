@@ -55,9 +55,15 @@ function User (props) {
           <Tabs>
 
             <TabList className="TabList">
-              <Tab className="TabList-link">Repositories</Tab>
-              <Tab className="TabList-link">Followers</Tab>
-              <Tab className="TabList-link">Following</Tab>
+              <Tab className="TabList-link">
+                Repositories {props.public_repos}
+              </Tab>
+              <Tab className="TabList-link">
+                Followers {props.followers}
+              </Tab>
+              <Tab className="TabList-link">
+                Following {props.following}
+              </Tab>
             </TabList>
 
             <TabPanel>
