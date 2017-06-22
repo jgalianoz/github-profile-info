@@ -16,7 +16,15 @@ const api = {
       const value = await response.json();
       return value;
     }
-  }
+  },
+  followers: {
+    async listFollowers(user) {
+      const response = await fetch(`${baseURL}/users/${user}/followers`)
+      const value = await response.json();
+      return value;
+    }
+  },
+
 }
 
 export default api;

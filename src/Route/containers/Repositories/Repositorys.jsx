@@ -10,7 +10,6 @@ class Repositorys extends Component {
 
     this.state = {
       page: 1,
-      loading: true,
     };
     this.handlePageChange = this.handlePageChange.bind(this);
   }
