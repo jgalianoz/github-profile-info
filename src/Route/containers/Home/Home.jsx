@@ -36,7 +36,11 @@ class Home extends Component {
   }
 
   showUser(user, repos, followers) {
-    const el = <User  {...user} repos={repos} followers={followers} />;
+    const el = <User
+      {...user}
+      repos={repos}
+      followers={followers} />;
+
     this.setState({
       result: el,
     });

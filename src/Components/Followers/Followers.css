@@ -2,16 +2,16 @@ a {
   text-decoration: none;
 }
 
-.react-tabs__tab-panel {
-  column-count: 2
-}
-
 .container-followers {
   display: inline-block;
-  width: 100%;
+  width: 300px;
   margin-bottom: 20px;
   border-bottom: 1px solid #DDD;
   cursor: pointer;
+}
+
+.followers-avatar {
+  margin: 0;
 }
 
 .followers-avatar > img {
