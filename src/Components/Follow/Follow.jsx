@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Followers.css';
+import './Follow.css';
 
 function Followers(props) {
   return(

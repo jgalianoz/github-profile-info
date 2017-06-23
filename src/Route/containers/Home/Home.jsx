@@ -27,19 +27,22 @@ class Home extends Component {
       user,
       repositories,
       followers,
+      following,
     ] = await Promise.all([
       api.users.listUser(this.state.query),
       api.repository.listRepos(this.state.query),
       api.followers.listFollowers(this.state.query),
+      api.following.listFollowings(this.state.query),
     ]);
-    this.showUser(user, repositories, followers);
+    this.showUser(user, repositories, followers, following);
   }
 
-  showUser(user, repos, followers) {
+  showUser(user, repos, followers, following) {
     const el = <User
       {...user}
       repos={repos}
-      followers={followers} />;
+      followers={followers}
+      following={following} />;
 
     this.setState({
       result: el,

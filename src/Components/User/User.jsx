@@ -9,9 +9,11 @@ import {
 import './User.css';
 
 import Repositorys from '../../Route/containers/Repositories/Repositorys';
-import Followers from '../Followers/Followers';
+import Follow from '../Follow/Follow';
 
 function User (props) {
+
+  console.log(props);
 
   if ( props.message ) {
    return(
@@ -63,7 +65,7 @@ function User (props) {
                 Followers {props.followers.length}
               </Tab>
               <Tab className="TabList-link">
-                Following {props.following}
+                Following {props.following.length}
               </Tab>
             </TabList>
 
@@ -74,14 +76,17 @@ function User (props) {
             <TabPanel>
               {props.followers
                 .map(user => {
-                  console.log(user)
-                  return <Followers key={user.id} {...user} />
+                  return <Follow key={user.id} {...user} />
                 })
               }
             </TabPanel>
 
             <TabPanel>
-              <h2>Following</h2>
+              {props.following
+                .map(user => {
+                  return <Follow key={user.id} {...user} />
+                })
+              }
             </TabPanel>
 
           </Tabs>

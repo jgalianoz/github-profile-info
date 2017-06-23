@@ -24,6 +24,13 @@ const api = {
       return value;
     }
   },
+  following: {
+    async listFollowings(user) {
+      const response = await fetch(`${baseURL}/users/${user}/following`)
+      const value = await response.json();
+      return value;
+    }
+  },
 
 }
 
