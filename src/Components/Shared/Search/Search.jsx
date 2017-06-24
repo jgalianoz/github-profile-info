@@ -25,7 +25,7 @@ function Search (props) {
           id="texto"
           type="search"
           autoComplete="off"
-          placeholder="Search user github..."
+          placeholder="Search GitHub"
           onChange={props.textValue}/>
       </form>
     </div>
