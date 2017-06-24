@@ -13,8 +13,6 @@ import Follow from '../Follow/Follow';
 
 function User (props) {
 
-  console.log(props);
-
   if ( props.message ) {
    return(
      <p>

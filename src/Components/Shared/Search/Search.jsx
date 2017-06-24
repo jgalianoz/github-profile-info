@@ -4,11 +4,6 @@ import './Search.css';
 
 function Search (props) {
 
-  function CloseSearch(ev) {
-    const element = ev.target.closest('#search');
-    element.classList.add('search-inactive');
-  }
-
   return(
     <div id="search" className="container-search">
       <div className="container-title">
@@ -16,7 +11,7 @@ function Search (props) {
           <i className="material-icons">search</i>
           Buscador
         </h3>
-        <span className="close" onClick={CloseSearch}>
+        <span className="close" onClick={props.CloseSearch}>
           <i className="material-icons">close</i>
         </span>
       </div>

@@ -35,6 +35,7 @@ class Home extends Component {
       api.following.listFollowings(this.state.query),
     ]);
     this.showUser(user, repositories, followers, following);
+    this.CloseSearch();
   }
 
   showUser(user, repos, followers, following) {
@@ -56,6 +57,11 @@ class Home extends Component {
     })
   }
 
+  CloseSearch() {
+    const element = document.getElementsByClassName('container-search')[0];
+    element.classList.add('search-inactive');
+  }
+
   render() {
     return (
       <section className="container-app">
@@ -67,7 +73,8 @@ class Home extends Component {
         <div className="Wrapper">
           <Search
             textValue={this.textInput}
-            initialFetch={this.initialFetch} />
+            initialFetch={this.initialFetch}
+            CloseSearch={this.CloseSearch} />
           {
             this.state.result
           }
